@@ -1,7 +1,7 @@
 .bg-container {
-    background-image: url('https://image.freepik.com/free-photo/abstract-grunge-decorative-relief-navy-blue-stucco-wall-texture-wide-angle-rough-colored-background_1258-28311.jpg');
+    background-image: url('https://i.ibb.co/HCWc7Mb/planet-volumes-y-To1u-i1p-VI-unsplash.jpg');
     background-size: cover;
-    height: 150vh;
+    height: 100vh;
     padding-top: 30px;
     display: flex;
     flex-direction: row;
@@ -15,8 +15,9 @@
   .heading {
     font-family: 'Bree serif';
     text-align: center;
-    font-size: 40px;
+    font-size: 50px;
     color: #ffffff;
+    text-shadow: 2px 2px 4px #9fdcff;
   }
   
   .input-icon {

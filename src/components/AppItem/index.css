@@ -1,11 +1,11 @@
 .tab-list-item {
     margin: 15px;
     border-radius: 15px;
-    box-shadow: 4px 3px 3px 5px red;
+    box-shadow: 3px 2px 2px 4px rgb(4, 4, 4);
     list-style: none;
     width: 150px;
     height: 170px;
-    background-color: #ffffff;
+    background-color: #91fffa;
     display: flex;
     flex-direction: column;
     justify-content: center;

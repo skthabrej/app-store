@@ -50,7 +50,7 @@ const appsList = [
     appId: 5,
     appName: 'Twitter',
     imageUrl:
-      'https://i.ibb.co/rfF5qtg/5296508-snapchat-logo-ghost-snap-snapchat-social-media-icon.png" alt="5296508-snapchat-logo-ghost-snap-snapchat-social-media-icon',
+      'https://i.ibb.co/rfF5qtg/5296508-snapchat-logo-ghost-snap-snapchat-social-media-icon.png',
     category: 'SOCIAL',
   },
   {
@@ -85,35 +85,35 @@ const appsList = [
     appId: 10,
     appName: 'Subway Surfers',
     imageUrl:
-      'https://assets.ccbp.in/frontend/react-js/app-store/games-subway-surfers.png',
+      'https://i.ibb.co/BBYWhfR/First-Avatar.webp',
     category: 'GAMES',
   },
   {
     appId: 11,
-    appName: 'Crossy Road',
+    appName: 'FreeFire',
     imageUrl:
-      'https://assets.ccbp.in/frontend/react-js/app-store/games-crossy-road.png',
+      'https://i.ibb.co/j3zgdV7/60bf039f5f35f.png',
     category: 'GAMES',
   },
   {
     appId: 12,
-    appName: 'Super Chef',
+    appName: 'Pub G',
     imageUrl:
-      'https://assets.ccbp.in/frontend/react-js/app-store/games-super-chef.png',
+      'https://i.ibb.co/ncNp80W/unnamed.png',
     category: 'GAMES',
   },
   {
     appId: 13,
     appName: 'Angry Birds',
     imageUrl:
-      'https://assets.ccbp.in/frontend/react-js/app-store/games-angry-birds.png',
+      'https://i.ibb.co/BgkjbzX/VPf-TOVckw-KRKKo-Yu-P5-Td-BPd-Sbr-Osx-YWQy-QNm-Wqt-WUdl-JJNTk-G70ml60-Pc-Az3-x-VJ5zs.jpg',
     category: 'GAMES',
   },
   {
     appId: 14,
     appName: 'Hill Climb 2',
     imageUrl:
-      'https://assets.ccbp.in/frontend/react-js/app-store/games-hill-climb-2.png',
+      'https://i.ibb.co/hf3C0wQ/hill-climb-racing-2.png',
     category: 'GAMES',
   },
   {
@@ -291,8 +291,6 @@ const appsList = [
     category: 'FOOD',
   },
 ]
-
-// Write your code here
 
 class AppStore extends Component {
   state = {activeTab: tabsList[0].tabId, searchInput: ''}
