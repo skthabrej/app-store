@@ -4,9 +4,9 @@ import AppItem from '../AppItem'
 import './index.css'
 
 const tabsList = [
-  {tabId: 'SOCIAL', displayText: 'Social'},
   {tabId: 'GAMES', displayText: 'Games'},
   {tabId: 'NEWS', displayText: 'News'},
+  {tabId: 'SOCIAL', displayText: 'Social'},
   {tabId: 'FOOD', displayText: 'Food'},
 ]
 
@@ -293,13 +293,20 @@ const appsList = [
 ]
 
 class AppStore extends Component {
-  state = {activeTab: tabsList[0].tabId, searchInput: ''}
-
-  onSelectTab = tabId => {
-    this.setState({activeTab: tabId})
+  state={
+    activeTab:tabsList[0].tabId,
+    searchInput: ''
   }
 
-  getFilteredData = () => {
+  onSelectTab = tabId => {
+    this.setState({activeTab:tabId})
+  }
+
+  onSearchItems = event => {
+    this.setState({searchInput:event.target.value})
+  }
+
+  getFiltereddata = () => {
     const {activeTab} = this.state
     return appsList.filter(eachItem => eachItem.category === activeTab)
   }
@@ -307,53 +314,47 @@ class AppStore extends Component {
   getSearchedData = filteredData => {
     const {searchInput} = this.state
     return filteredData.filter(eachItem =>
-      eachItem.appName.toLowerCase().includes(searchInput.toLowerCase()),
+      eachItem.appName.toLowerCase().includes(searchInput.toLowerCase())
     )
   }
 
-  onSearchItems = event => {
-    this.setState({searchInput: event.target.value})
-  }
-
   render() {
-    const {activeTab, searchInput} = this.state
-    const filteredData = this.getFilteredData()
+    const {activeTab,searchInput} = this.state
+    const filteredData = this.getFiltereddata()
     const searchedData = this.getSearchedData(filteredData)
     return (
       <div className="bg-container">
         <div className="inner-container">
-          <h1 className="heading">App Store</h1>
+          <h1 className="heading">My Store</h1>
           <div className="input-icon">
             <input
-              className="input-style"
-              type="search"
-              placeholder="search"
-              value={searchInput}
-              onChange={this.onSearchItems}
-            />
-            <img
-              className="icon-style"
-              src="https://assets.ccbp.in/frontend/react-js/app-store/app-store-search-img.png "
-              alt="search icon"
+            type='search'
+            placeholder='search'
+            className='input-style'
+            value={searchInput}
+            onChange={this.onSearchItems}
             />
           </div>
           <div className="tabs-container">
             <ul className="tabs">
               {tabsList.map(eachItem => (
-                <TabItem
-                  tab={eachItem}
-                  key={eachItem.tabId}
-                  onSelectTab={this.onSelectTab}
-                  isActive={activeTab === eachItem.tabId}
+                <TabItem 
+                tab={eachItem}
+                key={eachItem.tabId}
+                onSelectTab={this.onSelectTab}
+                isActive={activeTab === eachItem.tabId}
                 />
               ))}
             </ul>
           </div>
           <div className="apps-container">
-            <ul className="tab-items">
-              {searchedData.map(eachApp => (
-                <AppItem key={eachApp.appId} searchedApp={eachApp} />
-              ))}
+          <ul className='tab-items'>
+            {searchedData.map(eachApp => (
+              <AppItem
+              searchedApp={eachApp}
+              key={eachApp.appId}
+              />
+            ))}
             </ul>
           </div>
         </div>
