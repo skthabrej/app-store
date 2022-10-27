@@ -118,9 +118,9 @@ const appsList = [
   },
   {
     appId: 15,
-    appName: 'Temple Run',
+    appName: 'Call of Duty',
     imageUrl:
-      'https://assets.ccbp.in/frontend/react-js/app-store/games-temple-run.png',
+      'https://i.postimg.cc/XY6W1WvL/call-of-duty-mobile-button-sm00-1552980373997.jpg',
     category: 'GAMES',
   },
   {
